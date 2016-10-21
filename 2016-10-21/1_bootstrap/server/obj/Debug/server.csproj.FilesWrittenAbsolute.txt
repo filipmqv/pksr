@@ -1,0 +1,7 @@
+/home/filipmqv/pksr/2016-10-21/1_bootstrap/server/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/filipmqv/pksr/2016-10-21/5_bootstrap/server/bin/Debug/sqlite/x64/sqlite3.dll
+/home/filipmqv/pksr/2016-10-21/5_bootstrap/server/bin/Debug/server.exe.config
+/home/filipmqv/pksr/2016-10-21/5_bootstrap/server/bin/Debug/server.exe.mdb
+/home/filipmqv/pksr/2016-10-21/5_bootstrap/server/bin/Debug/server.exe
+/home/filipmqv/pksr/2016-10-21/1_bootstrap/server/obj/Debug/server.exe
+/home/filipmqv/pksr/2016-10-21/1_bootstrap/server/obj/Debug/server.exe.mdb
