@@ -1,0 +1,19 @@
+﻿<Properties StartupItem="server/server.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="server/src/Services/PatientsService/PatientsService.cs">
+    <Files>
+      <File FileName="server/src/AppHost.cs" Line="65" Column="45" />
+      <File FileName="server/src/Program.cs" Line="1" Column="1" />
+      <File FileName="server/src/Services/Hello.cs" Line="1" Column="1" />
+      <File FileName="server/src/Logic/Patients/Patient.cs" Line="8" Column="3" />
+      <File FileName="server/src/Logic/Patients/Address.cs" Line="14" Column="1" />
+      <File FileName="server/src/Services/PatientsService/DtoPatient.cs" Line="8" Column="39" />
+      <File FileName="server/src/Services/PatientsService/DtoPatientResponse.cs" Line="12" Column="36" />
+      <File FileName="server/src/Services/PatientsService/PatientsService.cs" Line="38" Column="9" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

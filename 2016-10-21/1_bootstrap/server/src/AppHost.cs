@@ -12,6 +12,8 @@ using ServiceStack.ServiceInterface.Validation;
 using ServiceStack.Text;
 using ServiceStack.WebHost.Endpoints;
 using ServiceStack.Redis;
+using ServiceStack.Logging;
+using ServiceStack.Logging.NLogger;
 
 
 namespace Server
@@ -29,13 +31,17 @@ namespace Server
 
         public override void Configure (Container container)
         {
+			LogManager.LogFactory = new NLogFactory ();
             JsConfig.DateHandler = JsonDateHandler.ISO8601;
             
             Plugins.Add (new AuthFeature (() => new AuthUserSession (),
                                           new IAuthProvider[] {new CredentialsAuthProvider ()})
                 );
             Plugins.Add (new RegistrationFeature ());
-            Plugins.Add(new RequestLogsFeature());
+			Plugins.Add(new RequestLogsFeature {
+				EnableSessionTracking = false,
+				RequiredRoles = null
+			});
 
 			container.Register<ICacheClient>(new MemoryCacheClient());
 
