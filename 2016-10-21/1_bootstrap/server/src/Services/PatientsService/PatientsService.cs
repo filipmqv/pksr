@@ -27,13 +27,14 @@ namespace Server.Services.PatientService
 
 			return new DtoPatientResponse (dtoPatients);
 		}
-
-		/*public object Delete (DtoPatient req) 
+			
+		public object Delete (DtoPatient req) 
 		{
+			Db.DeleteById<Patient> (req.Id);
+			return new HttpResult(HttpStatusCode.OK, "Patient deleted");
+		}
 
-		}*/
-
-		[SetStatus(HttpStatusCode.Accepted, "New patient was created")]
+		[SetStatus(HttpStatusCode.Accepted, "New patient created")]
 		public object Post (DtoPatient dtoPatient)
 		{
 			Patient newPatient = new Patient ().PopulateWith (dtoPatient);
@@ -42,10 +43,13 @@ namespace Server.Services.PatientService
 
 		}
 
-		/*public object Put (DtoPatient dtoPatient) 
+		[SetStatus(HttpStatusCode.OK, "Patient updated")]
+		public object Put (DtoPatient dtoPatient) 
 		{
-
-		}*/
+			Patient updatePatient = new Patient ().PopulateWith (dtoPatient);
+			Db.Update<Patient> (updatePatient);
+			return new DtoPatientResponse (new List<DtoPatient> () { dtoPatient });
+		}
 	}
 }
 

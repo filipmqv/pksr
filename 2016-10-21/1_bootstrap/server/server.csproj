@@ -86,6 +86,7 @@
     <Compile Include="src\Services\PatientsService\DtoPatient.cs" />
     <Compile Include="src\Services\PatientsService\DtoPatientResponse.cs" />
     <Compile Include="src\Services\PatientsService\PatientsService.cs" />
+    <Compile Include="src\Services\PatientsService\DtoPatientValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
