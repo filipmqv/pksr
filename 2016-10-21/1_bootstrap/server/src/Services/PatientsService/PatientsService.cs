@@ -10,13 +10,15 @@ using System.Collections.Generic;
 
 namespace Server.Services.PatientService
 {
-	public class PatientsService : Service
+	[Authenticate]
+	public class PatientsService : BaseService
 	{
 		public PatientsService ()
 		{
 			Db.CreateTableIfNotExists<Patient> ();
 		}
 
+		[RequiredPermission("read")]
 		public object Get (DtoPatient req)
 		{
 			var patients = req.Id == null
@@ -35,6 +37,7 @@ namespace Server.Services.PatientService
 		}
 
 		[SetStatus(HttpStatusCode.Accepted, "New patient created")]
+		[RequiredRole("editor")]
 		public object Post (DtoPatient dtoPatient)
 		{
 			Patient newPatient = new Patient ().PopulateWith (dtoPatient);

@@ -14,7 +14,7 @@ namespace Server.Logic.Patients
 		public string ContactPhoneNumber { get; set; }
 		public string Email { get; set; }
 		public DateTime CreatedAt { get; set; }
-
+		public int OwnerId { get; set; }
 
 	}
 }
